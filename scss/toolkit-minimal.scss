@@ -1,6 +1,11 @@
 // minimal
 $brand-primary:      #685D9F;
 
+
+body{
+    font-weight: 100;
+}
+
 @import "./variables.scss";
 
 // misc typography
@@ -13,7 +18,6 @@ $letter-spacing-base:  -.02em;
 // lead
 $lead-letter-spacing: $letter-spacing-base;
 $lead-font-size:      $font-size-base * 1.5;
-
 
 // blocks
 $block-title-font-size-sm: $font-size-base * 5.5;
@@ -36,4 +40,82 @@ $navbar-toggler-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 
 
 $input-height-base: 39px;
 
+.navbar-nav {
+    .nav-link {
+        font-size: $font-size-sm * 1.3;
+        font-weight: 100;
+    }
+}
+
 @import "./components.scss";
+
+h1.block-title{
+    font-size: $font-size-base * 4;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+}
+.navbar-toggler-left {
+    margin-top: -45px;
+    left: -15px;
+}
+
+.block-footer{
+    background-color: rgb(27, 28, 29);
+    color: #444;
+    color: rgba(116, 119, 123, .5);   
+}
+
+.box-img{
+    width: 100%;
+}
+
+#scaggiano-wrapper{
+    display: block;
+    text-decoration: none;
+    margin: 5px auto 0 auto;
+    width: 200px;
+    
+    #page-developed-by{
+        text-align: center;
+        text-decoration: none;
+        color: white;
+    }
+    
+    #page-developed-by:visited{
+        color: white;
+    }
+    
+    #logo-chars {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        margin: 10px auto;
+        display: block;
+        color: white;
+        background-image: url('../img/logo-sc.png');
+        background-size: cover;
+    }
+}
+
+.block-footer{
+    color: white;
+}
+
+.dropdown-menu {
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px 20px;
+    border: none;
+    
+    .dropdown-item {
+        font-weight: 100;
+        margin: 0;
+        padding: 10px;
+    }
+    
+    .dropdown-item:hover{
+        background-color: transparent;
+        text-decoration: underline;
+    }
+}

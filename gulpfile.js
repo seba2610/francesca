@@ -17,6 +17,8 @@ var wrapper      = require('gulp-wrapper')
 var Paths = {
   HERE                 : './',
   DIST                 : 'dist',
+  DIST_CSS             : 'dist/css',
+  DIST_JS              : 'dist/js',
   DIST_TOOLKIT_JS      : 'dist/toolkit.js',
   SCSS_TOOLKIT_SOURCES : './scss/toolkit*',
   SCSS                 : './scss/**/**',
@@ -52,7 +54,7 @@ var jqueryVersionCheck = '+function ($) {\n' +
   '  }\n' +
   '}(jQuery);\n\n'
 
-gulp.task('default', ['scss-min', 'js-min'])
+gulp.task('default', ['scss-min', 'js-min', 'watch'])
 
 gulp.task('watch', function () {
   gulp.watch(Paths.SCSS, ['scss-min']);
@@ -78,7 +80,7 @@ gulp.task('scss', function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write(Paths.HERE))
-    .pipe(gulp.dest(Paths.DIST))
+    .pipe(gulp.dest(Paths.DIST_CSS))
 })
 
 gulp.task('scss-min', ['scss'], function () {
@@ -91,8 +93,18 @@ gulp.task('scss-min', ['scss'], function () {
       suffix: '.min'
     }))
     .pipe(sourcemaps.write(Paths.HERE))
-    .pipe(gulp.dest(Paths.DIST))
+    .pipe(gulp.dest(Paths.DIST_CSS))
 })
+
+//Watch task
+gulp.task('watch-styles',function() {
+    gulp.watch(Paths.SCSS_TOOLKIT_SOURCES, ['scss']);
+});
+
+//Watch task
+gulp.task('watch-styles-min',function() {
+    gulp.watch(Paths.SCSS_TOOLKIT_SOURCES, ['scss-min']);
+});
 
 gulp.task('js', function () {
   return gulp.src(Paths.JS)
@@ -123,7 +135,7 @@ gulp.task('js', function () {
                "\n+function () {\n",
        footer: '\n}();\n'
     }))
-    .pipe(gulp.dest(Paths.DIST))
+    .pipe(gulp.dest(Paths.DIST_JS))
 })
 
 gulp.task('js-min', ['js'], function () {
@@ -132,5 +144,5 @@ gulp.task('js-min', ['js'], function () {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest(Paths.DIST))
+    .pipe(gulp.dest(Paths.DIST_JS))
 })

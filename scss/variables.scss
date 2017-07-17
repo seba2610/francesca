@@ -39,7 +39,7 @@ $font-size-root: 14px;
 $font-family-sans-serif:  "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:       "Lora", Georgia, "Times New Roman", Times, serif;
 $font-family-base:        $font-family-sans-serif;
-$font-weight-base:        300;
+$font-weight-base:        100;
 $line-height-base:        1.6;
 
 
@@ -53,7 +53,7 @@ $headings-small-color: inherit;
 // For .lead
 $lead-font-size:      ($font-size-base * 1.15);
 $lead-font-size-sm:   ($font-size-base * 1.25);
-$lead-font-weight:    300;
+$lead-font-weight:    100;
 $lead-line-height:    1.6;
 $lead-letter-spacing: 0;
 
