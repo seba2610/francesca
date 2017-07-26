@@ -119,3 +119,17 @@ h1.block-title{
         text-decoration: underline;
     }
 }
+
+@include media-breakpoint-down(sm) {
+    #main-text{
+        font-size: $font-size-lg;
+    }
+    
+    p{
+        font-size: $font-size-lg;
+    }
+    
+    .block-footer ul li{
+        font-size: $font-size-sm;
+    }
+}

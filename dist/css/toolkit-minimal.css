@@ -9043,4 +9043,12 @@ h1.block-title {
     background-color: transparent;
     text-decoration: underline; }
 
+@media (max-width: 767px) {
+  #main-text {
+    font-size: 1.25rem; }
+  p {
+    font-size: 1.25rem; }
+  .block-footer ul li {
+    font-size: 0.875rem; } }
+
 /*# sourceMappingURL=toolkit-minimal.css.map */
