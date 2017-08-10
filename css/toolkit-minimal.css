@@ -8999,8 +8999,8 @@ h1.block-title {
   border-color: transparent; }
 
 .navbar-toggler-left {
-  margin-top: -45px;
-  left: -15px; }
+  margin-top: -35px;
+  }
 
 .block-footer {
   background-color: #1b1c1d;
@@ -9071,6 +9071,48 @@ h1.block-title {
     background-color: transparent;
     text-decoration: underline; }
 
+#navbar-wrapper {
+    background-color: white;
+    height: 167px;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+#main-block{
+    margin-top: 180px;
+}
+
+#navbar-wrapper.smaller {
+    height: 75px;
+}
+
+.navbar-light{
+    background-color: white;
+}
+
+#navbar-wrapper.smaller h1#logo {
+    width: 150px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+#navbar-wrapper.smaller #subtitle{
+    display: none;
+}
+
+#navbar-wrapper.smaller .navbar-light{
+    margin-top: -10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#navbar-wrapper.smaller .navbar-light:before{
+    border-top: none;
+}
+
 @media (max-width: 767px) {
   #main-text {
     font-size: 1.25rem; }
@@ -9082,6 +9124,19 @@ h1.block-title {
     padding: 0 15px 0 15px; }
   .slider-size > div {
     background-size: cover;
-    height: 400px; } }
+    height: 400px; } 
+    #main-block{
+        margin-top: 45px;
+    }
+    
+    #navbar-wrapper ,#navbar-wrapper.smaller{
+        height: 30px;
+    }
+    
+    #navbar-wrapper.smaller .navbar-toggler {
+        margin-top: -32px;
+    }
+}
 
+}
 /*# sourceMappingURL=toolkit-minimal.css.map */
