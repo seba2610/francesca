@@ -8999,7 +8999,7 @@ h1.block-title {
   border-color: transparent; }
 
 .navbar-toggler-left {
-  margin-top: -35px;
+  margin-top: -42px;
   }
 
 .block-footer {
@@ -9134,11 +9134,11 @@ h1.block-title {
     }
     
     #navbar-wrapper ,#navbar-wrapper.smaller{
-        height: 30px;
+        height: 45px;
     }
     
     #navbar-wrapper.smaller .navbar-toggler {
-        margin-top: -32px;
+        margin-top: -36px;
     }
 }
 
