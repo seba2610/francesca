@@ -9050,14 +9050,18 @@ h1.block-title {
   display: inline-block;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+}
 
 .inst-wrapper {
   background-size: cover;
   background-position: center;
-  height: auto;
-  height: 300px;
-  border: 3px solid white; }
+  border: 3px solid white;
+}
+
+.inst-wrapper > img {
+    width: 100%;
+}
 
 .dropdown-menu {
   background-color: rgba(255, 255, 255, 0.8);
